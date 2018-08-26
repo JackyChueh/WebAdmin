@@ -1,0 +1,797 @@
+﻿
+@{
+    ViewBag.Title = "FunctionQuery";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered table-hover table-striped mt-3">
+    <thead>
+        <tr>
+            <td colspan="13">
+                <div class="row">
+                    <div class="col-3">系統功能架構</div>
+                    <div class="col-9 btn-group justify-content-end"><button type="button" class="btn btn-outline-secondary">查詢</button><button type="button" class="btn btn-outline-secondary">新增</button><button type="button" class="btn btn-outline-secondary">匯出</button></div>
+                    </div>
+            </td>
+                    </tr>
+        <tr>
+            <th colspan="2"></th>
+            <th>序號</th>
+            <th>功能清單</th>
+            <th>資料狀態</th>
+            <th>類型</th>
+            <th>路徑</th>
+            <th>上層節點</th>
+            <th>顯示順序</th>
+            <th>建檔時間</th>
+            <th>建檔人員</th>
+            <th>異動時間</th>
+            <th>異動人員</th>
+        </tr>
+        @*<tr>
+            <td><input type="checkbox" /></td>
+            <td></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+            <td><input type="text" class="form-control" /></td>
+        </tr>*@
+    </thead>
+    <tbody>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>1043</td><td>測試網頁3</td><td>Y</td><td>P</td><td>/Function/Index3</td><td>1036</td><td>32767</td><td>2015-02-04 11:45:18.720</td><td>Admin</td><td>2015-02-04 11:45:18.720</td><td>Admin </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>1041</td><td>測試網頁2</td><td>Y</td><td>P</td><td>/Function/Index2</td><td>1036</td><td>2</td><td>2015-02-04 11:45:18.720</td><td>Admin</td><td>2015-02-04 11:45:18.720</td><td>Admin     </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>1040</td><td>系統參數管理</td><td>Y</td><td>P</td><td>SYS/SYS03/SYS030030</td><td>4</td><td>4</td><td>2015-02-04 11:09:28.150</td><td>Admin</td><td>2015-02-04 11:09:28.150</td><td>Admin  </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>1039</td><td>使用者相關</td><td>Y</td><td>F</td><td></td><td>8</td><td>1</td><td>2015-02-04 11:09:28.150</td><td>Admin</td><td>2015-02-04 11:09:28.150</td><td>Admin                       </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>1037</td><td>叫車便利網</td><td>Y</td><td>S</td><td></td><td>0</td><td>0</td><td>2015-02-04 11:09:28.153</td><td>Admin</td><td>2015-02-04 11:09:28.153</td><td>Admin                       </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>1036</td><td>系統管理中心</td><td>Y</td><td>S</td><td></td><td>0</td><td>0</td><td>2015-02-04 11:09:28.153</td><td>Admin</td><td>2015-02-04 11:09:28.153</td><td>Admin                     </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>36</td><td>TPC下午 04:53</td><td>Y</td><td>F</td><td>/Program/Index</td><td>1037</td><td>1</td><td>2015-02-04 11:09:28.157</td><td>Admin</td><td>2015-02-04 11:09:28.157</td><td>Admin     </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>32</td><td>測試網頁</td><td>Y</td><td>P</td><td>/Function/Index</td><td>1036</td><td>0</td><td>2015-02-04 11:45:18.720</td><td>Admin</td><td>2015-02-04 11:45:18.720</td><td>Admin         </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>30</td><td>定點基本資料管理</td><td>Y</td><td>F</td><td></td><td>1037</td><td>1</td><td>2015-02-04 11:09:28.157</td><td>Admin</td><td>2015-02-04 11:09:28.157</td><td>Admin                </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>29</td><td>定點資料維護</td><td>Y</td><td>P</td><td>/Home/Index</td><td>30</td><td>1</td><td>2015-02-04 11:09:28.157</td><td>Admin</td><td>2015-02-04 11:09:28.157</td><td>Admin           </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>28</td><td>叫車站資料維護</td><td>Y</td><td>P</td><td>/Function/Index</td><td>30</td><td>2</td><td>2015-02-04 11:09:28.157</td><td>Admin</td><td>2015-02-04 11:09:28.157</td><td>Admin     </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>27</td><td>叫車帳號維護</td><td>Y</td><td>P</td><td>/Home/Test</td><td>30</td><td>3</td><td>2015-02-04 11:09:28.157</td><td>Admin</td><td>2015-02-04 11:09:28.157</td><td>Admin            </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>12</td><td>組織管理</td><td>Y</td><td>F</td><td></td><td>1036</td><td>6</td><td>2015-02-04 11:09:28.153</td><td>Admin</td><td>2015-02-04 11:09:28.153</td><td>Admin                        </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>11</td><td>使用者帳號管理</td><td>Y</td><td>P</td><td>SYS/SYS01/SYS010010</td><td>12</td><td>1</td><td>2015-02-04 11:09:28.153</td><td>Admin</td><td>2015-02-04 11:09:28.153</td><td>Admin </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>10</td><td>使用者群組管理</td><td>Y</td><td>P</td><td>SYS/SYS01/SYS010020</td><td>12</td><td>2</td><td>2015-02-04 11:09:28.150</td><td>Admin</td><td>2015-02-04 11:09:28.150</td><td>Admin </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>9</td><td>使用者角色管理</td><td>N</td><td>P</td><td>SYS/SYS01/SYS010030</td><td>12</td><td>3</td><td>2015-02-04 11:09:28.150</td><td>Admin</td><td>2015-02-04 11:09:28.150</td><td>Admin  </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>8</td><td>權限管理</td><td>Y</td><td>F</td><td></td><td>1036</td><td>7</td><td>2015-02-04 11:09:28.150</td><td>Admin</td><td>2015-02-04 11:09:28.150</td><td>Admin                         </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>7</td><td>使用者群組設定</td><td>Y</td><td>P</td><td>SYS/SYS02/SYS020010</td><td>8</td><td>1</td><td>2015-02-04 11:09:28.150</td><td>Admin</td><td>2015-02-04 11:09:28.150</td><td>Admin   </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>6</td><td>使用者功能權限</td><td>Y</td><td>P</td><td>SYS/SYS02/SYS020020</td><td>8</td><td>2</td><td>2015-02-04 11:09:28.150</td><td>Admin</td><td>2015-02-04 11:09:28.150</td><td>Admin   </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>5</td><td>使用者資料權限</td><td>Y</td><td>P</td><td>SYS/SYS02/SYS020030</td><td>8</td><td>3</td><td>2015-02-04 11:09:28.150</td><td>Admin</td><td>2015-02-04 11:09:28.150</td><td>Admin   </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>4</td><td>其他管理</td><td>Y</td><td>F</td><td></td><td>1036</td><td>8</td><td>2015-02-04 11:09:28.150</td><td>Admin</td><td>2015-02-04 11:09:28.150</td><td>Admin                         </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>3</td><td>系統功能管理</td><td>Y</td><td>P</td><td>SYS/SYS03/SYS030010</td><td>4</td><td>1</td><td>2015-02-04 11:09:28.150</td><td>Admin</td><td>2015-02-04 11:09:28.150</td><td>Admin     </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>2</td><td>常用片語管理</td><td>Y</td><td>P</td><td>SYS/SYS03/SYS030020</td><td>4</td><td>2</td><td>2015-02-04 11:09:28.150</td><td>Admin</td><td>2015-02-04 11:09:28.150</td><td>Admin     </td></tr>
+        <tr><td><input type="checkbox" /></td><td><div class="btn-group"><button type="button" class="btn btn-outline-secondary">修改</button><button type="button" class="btn btn-outline-secondary">刪除</button></div></td><td>1</td><td>郵遞區號管理</td><td>Y</td><td>P</td><td>SYS/SYS03/SYS030030</td><td>4</td><td>3</td><td>2015-02-04 11:09:28.150</td><td>Admin</td><td>2015-02-04 11:09:28.150</td><td>Admin     </td></tr>
+
+    </tbody>
+</table>
+
+    @*<table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th colspan="2">
+                    Actions
+                </th>
+                <th class="column-with-ordering" data-order-by="customerName">Name</th>
+                <th class="column-with-ordering" data-order-by="contactLastName">Last Name</th>
+                <th class="column-with-ordering" data-order-by="phone">Phone</th>
+                <th class="column-with-ordering" data-order-by="city">City</th>
+                <th class="column-with-ordering" data-order-by="country">Country</th>
+                <th class="column-with-ordering" data-order-by="s2ce8caf0">from Employeer</th>
+                <th class="column-with-ordering" data-order-by="creditLimit">CreditLimit</th>
+            </tr>
+
+            <tr class="filter-row gc-search-row">
+                <td class="no-border-right ">
+                    <div class="floatL t5">
+                        <input type="checkbox" class="select-all-none">
+                    </div>
+                </td>
+                <td class="no-border-left ">
+                    <div class="floatL">
+                        <a href="javascript:void(0);" title="Delete" class="hidden btn btn-outline-dark delete-selected-button">
+                            <i class="el el-remove text-danger"></i>
+                            <span class="text-danger">Delete</span>
+                        </a>
+                    </div>
+                    <div class="floatR l5">
+                        <a href="javascript:void(0);" class="btn btn-default btn-outline-dark gc-refresh">
+                            <i class="el el-refresh"></i>
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </td>
+                <td>
+                    <input type="text" class="form-control searchable-input floatL" placeholder="Search Name" name="customerName">
+                </td>
+                <td>
+                    <input type="text" class="form-control searchable-input floatL" placeholder="Search Last Name" name="contactLastName">
+                </td>
+                <td>
+                    <input type="text" class="form-control searchable-input floatL" placeholder="Search Phone" name="phone">
+                </td>
+                <td>
+                    <input type="text" class="form-control searchable-input floatL" placeholder="Search City" name="city">
+                </td>
+                <td>
+                    <input type="text" class="form-control searchable-input floatL" placeholder="Search Country" name="country">
+                </td>
+                <td>
+                    <input type="text" class="form-control searchable-input floatL" placeholder="Search from Employeer" name="s2ce8caf0">
+                </td>
+                <td>
+                    <input type="text" class="form-control searchable-input floatL" placeholder="Search CreditLimit" name="creditLimit">
+                </td>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox" class="select-row" data-id="141">
+                </td>
+                <td>
+                    <div class="only-desktops" style="white-space: nowrap">
+                        <a class="btn btn-default btn-outline-dark" href="/demo/bootstrap_theme_v4/edit/141"><i class="el el-pencil"></i> Edit</a>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-outline-dark gc-bootstrap-dropdown dropdown-toggle">
+                                More                                    <span class="caret"></span>
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/read/141" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/141" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i>
+                                    <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="only-mobiles">
+                        <div class="btn-group dropdown">
+                            <button type="button" class="btn btn-secondary gc-bootstrap-dropdown dropdown-toggle">
+                                Actions                            <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/edit/141" class="dropdown-item">
+                                    <i class="el el-pencil"></i> Edit
+                                </a>
+                                <a href="/demo/bootstrap_theme_v4/read/141" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/141" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i> <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    Euro+ Shopping Channel
+                </td>
+                <td>
+                    Freyre
+                </td>
+                <td>
+                    (91) 555 94 44
+                </td>
+                <td>
+                    Madrid
+                </td>
+                <td>
+                    Spain
+                </td>
+                <td>
+                    Hernandez
+                </td>
+                <td>
+                    227600
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="select-row" data-id="144">
+                </td>
+                <td>
+                    <div class="only-desktops" style="white-space: nowrap">
+                        <a class="btn btn-default btn-outline-dark" href="/demo/bootstrap_theme_v4/edit/144"><i class="el el-pencil"></i> Edit</a>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-outline-dark gc-bootstrap-dropdown dropdown-toggle">
+                                More                                    <span class="caret"></span>
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/read/144" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/144" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i>
+                                    <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="only-mobiles">
+                        <div class="btn-group dropdown">
+                            <button type="button" class="btn btn-secondary gc-bootstrap-dropdown dropdown-toggle">
+                                Actions                            <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/edit/144" class="dropdown-item">
+                                    <i class="el el-pencil"></i> Edit
+                                </a>
+                                <a href="/demo/bootstrap_theme_v4/read/144" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/144" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i> <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    Volvo Model Replicas, Co
+                </td>
+                <td>
+                    Berglund
+                </td>
+                <td>
+                    0921-12 3555
+                </td>
+                <td>
+                    Lulea
+                </td>
+                <td>
+                    Sweden
+                </td>
+                <td>
+                    Jones
+                </td>
+                <td>
+                    53100
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="select-row" data-id="145">
+                </td>
+                <td>
+                    <div class="only-desktops" style="white-space: nowrap">
+                        <a class="btn btn-default btn-outline-dark" href="/demo/bootstrap_theme_v4/edit/145"><i class="el el-pencil"></i> Edit</a>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-outline-dark gc-bootstrap-dropdown dropdown-toggle">
+                                More                                    <span class="caret"></span>
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/read/145" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/145" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i>
+                                    <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="only-mobiles">
+                        <div class="btn-group dropdown">
+                            <button type="button" class="btn btn-secondary gc-bootstrap-dropdown dropdown-toggle">
+                                Actions                            <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/edit/145" class="dropdown-item">
+                                    <i class="el el-pencil"></i> Edit
+                                </a>
+                                <a href="/demo/bootstrap_theme_v4/read/145" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/145" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i> <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    Danish Wholesale Imports
+                </td>
+                <td>
+                    Petersen
+                </td>
+                <td>
+                    31 12 3555
+                </td>
+                <td>
+                    Kobenhavn
+                </td>
+                <td>
+                    Denmark
+                </td>
+                <td>
+                    Castillo
+                </td>
+                <td>
+                    83400
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="select-row" data-id="146">
+                </td>
+                <td>
+                    <div class="only-desktops" style="white-space: nowrap">
+                        <a class="btn btn-default btn-outline-dark" href="/demo/bootstrap_theme_v4/edit/146"><i class="el el-pencil"></i> Edit</a>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-outline-dark gc-bootstrap-dropdown dropdown-toggle">
+                                More                                    <span class="caret"></span>
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/read/146" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/146" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i>
+                                    <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="only-mobiles">
+                        <div class="btn-group dropdown">
+                            <button type="button" class="btn btn-secondary gc-bootstrap-dropdown dropdown-toggle">
+                                Actions                            <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/edit/146" class="dropdown-item">
+                                    <i class="el el-pencil"></i> Edit
+                                </a>
+                                <a href="/demo/bootstrap_theme_v4/read/146" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/146" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i> <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    Saveley &amp; Henriot, Co.
+                </td>
+                <td>
+                    Saveley
+                </td>
+                <td>
+                    78.32.5555
+                </td>
+                <td>
+                    Lyon
+                </td>
+                <td>
+                    France
+                </td>
+                <td>
+                    Bondur
+                </td>
+                <td>
+                    123900
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="select-row" data-id="148">
+                </td>
+                <td>
+                    <div class="only-desktops" style="white-space: nowrap">
+                        <a class="btn btn-default btn-outline-dark" href="/demo/bootstrap_theme_v4/edit/148"><i class="el el-pencil"></i> Edit</a>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-outline-dark gc-bootstrap-dropdown dropdown-toggle">
+                                More                                    <span class="caret"></span>
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/read/148" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/148" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i>
+                                    <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="only-mobiles">
+                        <div class="btn-group dropdown">
+                            <button type="button" class="btn btn-secondary gc-bootstrap-dropdown dropdown-toggle">
+                                Actions                            <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/edit/148" class="dropdown-item">
+                                    <i class="el el-pencil"></i> Edit
+                                </a>
+                                <a href="/demo/bootstrap_theme_v4/read/148" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/148" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i> <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    Dragon Souveniers, Ltd.
+                </td>
+                <td>
+                    Natividad
+                </td>
+                <td>
+                    +65 221 7555
+                </td>
+                <td>
+                    Singapore
+                </td>
+                <td>
+                    Singapore
+                </td>
+                <td>
+                    Nishi
+                </td>
+                <td>
+                    103800
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="select-row" data-id="151">
+                </td>
+                <td>
+                    <div class="only-desktops" style="white-space: nowrap">
+                        <a class="btn btn-default btn-outline-dark" href="/demo/bootstrap_theme_v4/edit/151"><i class="el el-pencil"></i> Edit</a>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-outline-dark gc-bootstrap-dropdown dropdown-toggle">
+                                More                                    <span class="caret"></span>
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/read/151" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/151" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i>
+                                    <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="only-mobiles">
+                        <div class="btn-group dropdown">
+                            <button type="button" class="btn btn-secondary gc-bootstrap-dropdown dropdown-toggle">
+                                Actions                            <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/edit/151" class="dropdown-item">
+                                    <i class="el el-pencil"></i> Edit
+                                </a>
+                                <a href="/demo/bootstrap_theme_v4/read/151" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/151" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i> <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    Muscle Machine Inc
+                </td>
+                <td>
+                    Young
+                </td>
+                <td>
+                    2125557413
+                </td>
+                <td>
+                    NYC
+                </td>
+                <td>
+                    USA
+                </td>
+                <td>
+                    Tseng
+                </td>
+                <td>
+                    138500
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="select-row" data-id="157">
+                </td>
+                <td>
+                    <div class="only-desktops" style="white-space: nowrap">
+                        <a class="btn btn-default btn-outline-dark" href="/demo/bootstrap_theme_v4/edit/157"><i class="el el-pencil"></i> Edit</a>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-outline-dark gc-bootstrap-dropdown dropdown-toggle">
+                                More                                    <span class="caret"></span>
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/read/157" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/157" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i>
+                                    <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="only-mobiles">
+                        <div class="btn-group dropdown">
+                            <button type="button" class="btn btn-secondary gc-bootstrap-dropdown dropdown-toggle">
+                                Actions                            <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/edit/157" class="dropdown-item">
+                                    <i class="el el-pencil"></i> Edit
+                                </a>
+                                <a href="/demo/bootstrap_theme_v4/read/157" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/157" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i> <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    Diecast Classics Inc.
+                </td>
+                <td>
+                    Leong
+                </td>
+                <td>
+                    2155551555
+                </td>
+                <td>
+                    Allentown
+                </td>
+                <td>
+                    USA
+                </td>
+                <td>
+                    Patterson
+                </td>
+                <td>
+                    100600
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="select-row" data-id="161">
+                </td>
+                <td>
+                    <div class="only-desktops" style="white-space: nowrap">
+                        <a class="btn btn-default btn-outline-dark" href="/demo/bootstrap_theme_v4/edit/161"><i class="el el-pencil"></i> Edit</a>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-outline-dark gc-bootstrap-dropdown dropdown-toggle">
+                                More                                    <span class="caret"></span>
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/read/161" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/161" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i>
+                                    <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="only-mobiles">
+                        <div class="btn-group dropdown">
+                            <button type="button" class="btn btn-secondary gc-bootstrap-dropdown dropdown-toggle">
+                                Actions                            <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/edit/161" class="dropdown-item">
+                                    <i class="el el-pencil"></i> Edit
+                                </a>
+                                <a href="/demo/bootstrap_theme_v4/read/161" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/161" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i> <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    Technics Stores Inc.
+                </td>
+                <td>
+                    Hashimoto
+                </td>
+                <td>
+                    6505556809
+                </td>
+                <td>
+                    Burlingame
+                </td>
+                <td>
+                    USA
+                </td>
+                <td>
+                    Jennings
+                </td>
+                <td>
+                    84600
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="select-row" data-id="166">
+                </td>
+                <td>
+                    <div class="only-desktops" style="white-space: nowrap">
+                        <a class="btn btn-default btn-outline-dark" href="/demo/bootstrap_theme_v4/edit/166"><i class="el el-pencil"></i> Edit</a>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-outline-dark gc-bootstrap-dropdown dropdown-toggle">
+                                More                                    <span class="caret"></span>
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/read/166" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/166" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i>
+                                    <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="only-mobiles">
+                        <div class="btn-group dropdown">
+                            <button type="button" class="btn btn-secondary gc-bootstrap-dropdown dropdown-toggle">
+                                Actions                            <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/edit/166" class="dropdown-item">
+                                    <i class="el el-pencil"></i> Edit
+                                </a>
+                                <a href="/demo/bootstrap_theme_v4/read/166" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/166" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i> <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    Handji Gifts&amp; Co
+                </td>
+                <td>
+                    Victorino
+                </td>
+                <td>
+                    +65 224 1555
+                </td>
+                <td>
+                    Singapore
+                </td>
+                <td>
+                    Singapore
+                </td>
+                <td>
+                    Marsh
+                </td>
+                <td>
+                    97900
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="select-row" data-id="167">
+                </td>
+                <td>
+                    <div class="only-desktops" style="white-space: nowrap">
+                        <a class="btn btn-default btn-outline-dark" href="/demo/bootstrap_theme_v4/edit/167"><i class="el el-pencil"></i> Edit</a>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-outline-dark gc-bootstrap-dropdown dropdown-toggle">
+                                More                                    <span class="caret"></span>
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/read/167" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/167" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i>
+                                    <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="only-mobiles">
+                        <div class="btn-group dropdown">
+                            <button type="button" class="btn btn-secondary gc-bootstrap-dropdown dropdown-toggle">
+                                Actions                            <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="/demo/bootstrap_theme_v4/edit/167" class="dropdown-item">
+                                    <i class="el el-pencil"></i> Edit
+                                </a>
+                                <a href="/demo/bootstrap_theme_v4/read/167" class="dropdown-item">
+                                    <i class="el el-eye-open"></i> View
+                                </a>
+                                <a data-target="/demo/bootstrap_theme_v4/delete/167" href="javascript:void(0)" title="Delete" class="delete-row dropdown-item">
+                                    <i class="el el-remove text-danger"></i> <span class="text-danger">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    Herkku Gifts
+                </td>
+                <td>
+                    Oeztan
+                </td>
+                <td>
+                    +47 2267 3215
+                </td>
+                <td>
+                    Bergen
+                </td>
+                <td>
+                    Norway
+                </td>
+                <td>
+                    Jones
+                </td>
+                <td>
+                    96800
+                </td>
+            </tr>
+        </tbody>
+    </table>*@

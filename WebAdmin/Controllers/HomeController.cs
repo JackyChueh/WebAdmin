@@ -8,23 +8,40 @@ namespace WebAdmin.Controllers
 {
     public class HomeController : Controller
     {
+        // GET: Home
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Index2()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Index3()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
+
+        public ActionResult Dashboard()
+        {
+            return View();
+        }
+
+        public ActionResult EmptyPage()
+        {
+            return View();
+        }
+
+        public ActionResult FunctionRetrieve()
+        {
+            return View();
+        }
+        public ActionResult FunctionCreate()
+        {
+            return View();
+        }
+
     }
 }
